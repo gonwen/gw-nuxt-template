@@ -1,0 +1,32 @@
+// 按钮样式
+@mixin hoButtonMixin($lh: 30px,$pl: 20px,$fs:16px,$br:4px,$cl:$blue,$bc:transparent) {
+  line-height: $lh;
+  height: $lh;
+  padding: 0 $pl;
+  font-size: $fs;
+  border-radius: $br;
+  color: $cl;
+  background-color: $bc;
+}
+// 图片居中
+@mixin imgCenter{
+    max-width: 100%;
+    max-height: 100%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+// 自定义宽度样式名
+@mixin getWidthClassName($cnW: 240, $cnStr: 'cp-wd'){
+    .#{$cnStr}-#{$cnW}{
+        width: 100%;
+        max-width: #{$cnW}px;
+    }
+}
+// 文字单行省略
+@mixin word-sign-line {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
