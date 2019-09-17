@@ -1,13 +1,13 @@
 {
-    "name": "project-center-nuxt",
-    "version": "1.0.0",
-    "description": "CIIP——项目中心",
+    "name": "gw-nuxt-template",
+    "version": "1.0.1",
+    "description": "NUXT TEMPLATE FOR GW",
     "author": "gongwen <gongwen_1@163.com>",
     "private": true,
     "config": {
         "nuxt": {
             "host": "0.0.0.0",
-            "port": 3033
+            "port": 3080
         }
     },
     "scripts": {

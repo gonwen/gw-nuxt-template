@@ -5,10 +5,10 @@ module.exports = {
     ** Headers of the page
     */
     head: {
-        title: '项目中心-CIIP',
+        title: 'NUXT TEMPLATE FOR GW',
         meta: [
             {charset: 'utf-8'},
-            {hid: 'description', name: 'description', content: '项目中心-CIIP'}
+            {hid: 'description', name: 'description', content: 'NUXT TEMPLATE FOR GW'}
         ],
         link: [
             {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
@@ -54,7 +54,7 @@ module.exports = {
         NODE_ENV: process.env.NODE_ENVS === 'DEV' ? 'development' : 'production'
     },
     server: {
-        port: (packageconfig.config && packageconfig.config.nuxt && packageconfig.config.nuxt.port) || 3033,
+        port: (packageconfig.config && packageconfig.config.nuxt && packageconfig.config.nuxt.port) || 3080,
         host: (packageconfig.config && packageconfig.config.nuxt && packageconfig.config.nuxt.host) || '0.0.0.0',
     }
 }

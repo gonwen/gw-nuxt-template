@@ -1,6 +1,6 @@
-# project-center-nuxt
+# gw-nuxt-template
 
-> CIIP——项目中心
+> NUXT TEMPLATE FOR GW
 
 ## Build Setup
 
@@ -8,7 +8,7 @@
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:3033
+# serve with hot reload at localhost:3080
 npm run dev
 
 # build for production with minification
