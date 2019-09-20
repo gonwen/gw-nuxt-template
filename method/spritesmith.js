@@ -22,7 +22,7 @@ const templateStyle = (data) => {
     return shared + '\n' + perSprite
 }
 
-export default (config) => {
+module.exports = (config) => {
     config.resolve.modules.push(imagePath) // css在哪里能找到sprite图
     config.plugins.push(
         new SpritesmithPlugin({

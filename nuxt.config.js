@@ -1,5 +1,4 @@
 const packageconfig = require('./package')
-import spritesMithInit from './method/spritesmith'
 module.exports = {
     /*
     ** Headers of the page
@@ -43,7 +42,7 @@ module.exports = {
     build: {
         extractCSS: !(process.env.NODE_ENVS === 'DEV'),
         extend (config, ctx) {
-            if (ctx.isDev && ctx.isClient) spritesMithInit(config) // 雪碧图插件
+            if (ctx.isDev && ctx.isClient) require('./method/spritesmith')(config) // 雪碧图插件
         }
     },
     render: {
