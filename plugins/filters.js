@@ -11,11 +11,11 @@ const FILTER_FORMATER = {
             price (val, type) {
                 if (!val || isNaN(Number(val))) return type ? '0万元' : '0.00元'
                 else {
-                    let numb = type ? parseFloat((Number(val) / 10000).toFixed(2)) : Number(val).toFixed(2)
-                    let str = numb.toString()
-                    let arr = str.split('.')
+                    const numb = type ? parseFloat((Number(val) / 10000).toFixed(2)) : Number(val).toFixed(2)
+                    const str = numb.toString()
+                    const arr = str.split('.')
                     let num0 = ''
-                    let re = /(?=(?!\b)(\d{3})+$)/g
+                    const re = /(?=(?!\b)(\d{3})+$)/g
                     num0 = arr[0]
                     if (num0.length > 3) {
                         num0 = num0.replace(re, ',')

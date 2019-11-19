@@ -16,7 +16,7 @@ export default {
         return {
             title: '404',
             meta: [
-                { hid: 'description', name: 'description', content: '404' }
+                {hid: 'description', name: 'description', content: '404'}
             ]
         }
     }

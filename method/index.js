@@ -8,8 +8,8 @@
 const validScrollMsg = (formname, isThis, opt, className) => {
     let errInfo = '请正确填写信息'
     const getFirstErrDom = (childrenList) => {
-        let childArr = childrenList
-        let arrLen = childArr.length
+        const childArr = childrenList
+        const arrLen = childArr.length
         if (!(arrLen > 0)) return
         for (var i = 0; i < arrLen; i++) {
             if (childArr[i].validateState && childArr[i].validateState === 'error') {
@@ -21,9 +21,9 @@ const validScrollMsg = (formname, isThis, opt, className) => {
     const getErrDomInfo = (item) => {
         errInfo = opt[item.prop][0].message
         isThis.$message.error(errInfo)
-        let classNameDom = document.getElementsByClassName(className)
+        const classNameDom = document.getElementsByClassName(className)
         if (className && !classNameDom) return // class dom 不存在
-        let scrollDom = classNameDom ? classNameDom[0] : window
+        const scrollDom = classNameDom ? classNameDom[0] : window
         let oHeight = 0
         let oTop = 0
         let wHeight = 0
@@ -33,7 +33,7 @@ const validScrollMsg = (formname, isThis, opt, className) => {
             oHeight = scrollDom.scrollHeight
             oTop = scrollDom.scrollTop
             wHeight = scrollDom.clientHeight
-            let allSrocllTop = getParentsScrollTop(item.$el, className, item.$el.offsetTop)
+            const allSrocllTop = getParentsScrollTop(item.$el, className, item.$el.offsetTop)
             if (allSrocllTop) errTop = allSrocllTop - 70 - 80
         } else {
             oHeight =
@@ -67,16 +67,16 @@ const validScrollMsg = (formname, isThis, opt, className) => {
     }
     if (formname && isThis && opt) {
         // console.log('***par***', isThis.$refs[formname])
-        let childArr = isThis.$refs[formname].fields
+        const childArr = isThis.$refs[formname].fields
         getFirstErrDom(childArr)
     }
 }
 
 const getParentsScrollTop = (dom, classname, top) => {
     if (dom && classname && top !== false) {
-        let part = dom.parentElement
+        const part = dom.parentElement
         let cln = part.className
-        let tag = part.nodeName
+        const tag = part.nodeName
         let tp = top
         if (tag === 'BODY') return false
         if (cln) {
@@ -99,7 +99,8 @@ const IEVersion = () => {
     if (isIE) {
         var reIE = new RegExp('MSIE (\\d+\\.\\d+);')
         reIE.test(userAgent)
-        var fIEVersion = parseFloat(RegExp['$1'])
+        var fIEVersion = parseFloat(RegExp.$1)
+
         if (fIEVersion === 7) return 7
         else if (fIEVersion === 8) return 8
         else if (fIEVersion === 9) return 9
@@ -110,4 +111,4 @@ const IEVersion = () => {
     else return -1
 }
 
-export { validScrollMsg, IEVersion }
+export {validScrollMsg, IEVersion}

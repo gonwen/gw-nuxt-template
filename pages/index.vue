@@ -4,6 +4,8 @@
 </template>
 
 <script>
+import {validScrollMsg} from '../method'
+
 export default {
     head () {
         return {
@@ -12,6 +14,9 @@ export default {
                 {hid: 'description', name: 'description', content: '首页'}
             ]
         }
+    },
+    created () {
+        validScrollMsg()
     }
 }
 </script>

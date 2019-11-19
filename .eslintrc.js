@@ -15,6 +15,7 @@ module.exports = {
     ],
     rules: {
         'indent': ['error', 4, {'SwitchCase': 1}],
-        'generator-star-spacing': 'off'
+        'generator-star-spacing': 'off',
+        'object-curly-spacing': ['error', 'never']
     }
 }
